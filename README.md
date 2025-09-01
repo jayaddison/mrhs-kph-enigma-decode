@@ -70,7 +70,7 @@ To decrypt the ciphertext successfully, we need to obtain a few additional input
   - The pairing/remapping of keyboard letters used by the transmitting device
   - The message key: some characters randomly chosen by the transmitting radio officer
 
-These would all have been available to the intended recipients of the transmission as part of a codebook.  Fortunately for us, MRHS also provided a snippet of exactly such a codebook, and so we do not need to brute-force (e.g. try every combination) or otherwise crack (identify flaws in the Enigma protocol and use those to -- sometimes vastly -- reduce the number of combinations to try) the ciphertext.
+Apart from the message key, these would all have been available to the intended recipients of the transmission as part of a codebook.  Fortunately for us, MRHS also provided a snippet of exactly such a codebook, and so we do not need to brute-force (e.g. try every combination) or otherwise crack (identify flaws in the Enigma protocol and use those to -- sometimes vastly -- reduce the number of combinations to try) the ciphertext.
 
 Referring back to the decoded Morse Code stream, we can see that the unencrypted [header](https://en.wikipedia.org/wiki/Header_(computing)) that precedes the ciphertext indicates that the message was sent on May 27th - and we have the corresponding codebook (which also indicates that the relevant year is 1939).
 
