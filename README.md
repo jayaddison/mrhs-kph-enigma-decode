@@ -51,3 +51,14 @@ The part of the message that we are interesed in -- the ciphertext -- begins aft
 Due to noise either during the transmission, in the air, on the physical WebSDR that received the transmission, during my laptop's audio processing, or even elsewhere, there are some inconsistencies in the morse decoding.  If you're curious, you could listen to the corresponding parts of the audio file to try to identify what artifacts might have caused the decoded Morse output to differ.
 
 For convenience, the pair of automatically-Morse-decoded ciphertexts are included in this repository as `ciphertext.txt`, with some manual realignment to make it easier to spot where the characters differ (something that could prove useful if we encounter problems during the next stage in the decryption process).
+
+Second decoding stage: from a ciphertext character stream to the original plaintext
+-----------------------------------------------------------------------------------
+
+For this event, it was made clear that the ciphertext contained in the transmission was produced using Enigma encryption.
+
+That makes it much easier for us to figure out how to decrypt the contents, especially because, nearly 100 years later, digital computers are commonplace, and for reasons of historical curiosity, software code to decode Enigma messages is also widely available.
+
+My favourite programming language is [Python](https://www.python.org), and so my natural inclination was to attempt to find a Python library to decode Enigma messages -- and preferably one that was already available within the Debian operating system distribution.
+
+I found a packaged library meeting those requirements fairly quickly - it is named [`python3-enigma`](https://packages.debian.org/trixie/python3-enigma).  It includes not only unit test cases (frequently useful to find code that can be adapted for common use cases), but also some example decryption code.
