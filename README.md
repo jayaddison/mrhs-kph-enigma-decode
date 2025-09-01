@@ -32,7 +32,7 @@ First decoding stage: from Morse Code to a character stream
 
 The rapid series of dits and dots heard when the `2000Z.pcm` audio file is played are [Morse Code](https://en.wikipedia.org/wiki/Morse_code).
 
-I'm not familiar enough with morse code to be able to decode Morse Code by ear, even at fairly slow rates and without time pressure.  So for this challenge, I opted to use an open source utility called `multimon-ng`, available as a Debian package, that can decode various types of radio transmission, including Morse.
+I'm not familiar enough with Morse Code to be able to decode it by ear, even at fairly slow rates and without time pressure.  So for this challenge, I opted to use an open source utility called `multimon-ng`, available as a Debian package, that can decode various types of radio transmission, including Morse.
 
 The command to do this, and the output that appears, is shown below:
 
