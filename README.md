@@ -62,3 +62,11 @@ That makes it much easier for us to figure out how to decrypt the contents, espe
 My favourite programming language is [Python](https://www.python.org), and so my natural inclination was to attempt to find a Python library to decode Enigma messages -- and preferably one that was already available within the Debian operating system distribution.
 
 I found a packaged library meeting those requirements fairly quickly - it is named [`python3-enigma`](https://packages.debian.org/trixie/python3-enigma).  It includes not only unit test cases (frequently useful to find code that can be adapted for common use cases), but also some example decryption code.
+
+To decrypt the ciphertext successfully, we need to obtain a few additional inputs:
+
+  - The selection and arrangement of Enigma rotors used
+  - The ring settings applied to the rotors
+  - The pairing/remapping of keyboard letters used by the transmitting device
+
+These would all have been available to the intended recipients of the transmission as part of a codebook.  Fortunately for us, MRHS also provided a snippet of exactly such a codebook, and so we do not need to brute-force (e.g. try every combination) or otherwise crack (identify flaws in the Enigma protocol and use those to -- sometimes vastly -- reduce the number of combinations to try) the ciphertext.
