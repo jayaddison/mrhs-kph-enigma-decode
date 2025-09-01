@@ -12,7 +12,7 @@ from enigma.machine import EnigmaMachine
 machine = EnigmaMachine.from_key_sheet(
        rotors='II I IV',
        reflector='B',
-       ring_settings=[4, 8, 10],
+       ring_settings=[3, 7, 9],
        plugboard_settings='BR CS DJ ET FO GH LZ MP NV QW')
 
 # set machine initial starting position

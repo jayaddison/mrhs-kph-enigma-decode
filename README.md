@@ -119,3 +119,26 @@ LORFDQCUSHLPGDDIGFFOZADYDADMLJYODDNFXMYCMLUVAAUBZBUWEVJFJNEENEJKNZJCGFVVLJXALNZQ
 ```
 
 That's not plaintext; it's neither obviously English nor German (we'd probably expect one of those two, given the nature of the event).
+
+The reason, I discovered a couple of hours later, is that `python3-enigma` expects numeric ring settings to be zero-indexed against the alphabet.  In other words, `A=0` and `Z=25`.  This is in contrast to the codebook, where `A=1` and `Z=26`.
+
+So, the fixup is relatively straightforward; subtract one from each of the ring setting values.  Et voilà:
+
+```sh
+$ python3 decode.py
+BEGINPLANNINGCROSSCHANNELOPXOBJECTIVEENGLISHMAINLANDXDETAILNAVALANDAIRSUPPORTREQSXCODEWORDSEALIONXREPOHTINFIVEDYYSX
+```
+
+...and there's our message.  The `X` values should be replaced by newlines, and spacing/punctuation added as appropriate around apparent word boundaries, to make the original message easier to understand.
+
+```
+BEGIN PLANNING CROSS CHANNEL OP
+OBJECTIVE: ENGLISH MAINLAND
+DETAIL: NAVAL AND AIR SUPPORT REQD
+CODEWORD: SEALION
+REPORT IN FIVE DAYS
+```
+
+(note that the above snippet also fixes what appear to be a few decoding errors that manifest as typos)
+
+(and also: I believe that Operation Sea Lion itself did not commence until the following year during WWII)
