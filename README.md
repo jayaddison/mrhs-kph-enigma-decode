@@ -141,4 +141,4 @@ REPORT IN FIVE DAYS
 
 (note that the above snippet also fixes what appear to be a few decoding errors that manifest as typos)
 
-(and also: I believe that Operation Sea Lion itself did not commence until the following year during WWII)
+(and also: I believe that planning for the never-realized Operation Sea Lion itself did not commence until the following year during WWII)
