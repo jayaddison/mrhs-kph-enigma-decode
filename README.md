@@ -145,3 +145,10 @@ REPORT IN FIVE DAYS
 (note that the above snippet also fixes what appear to be a few decoding errors that manifest as typos)
 
 (and also: I believe that planning for the never-realized Operation Sea Lion itself did not commence until the following year during WWII)
+
+Credits
+-------
+
+In addition to the material provided for the event on the [MRHS webpage](https://www.radiomarine.org/mrhs-events), the following resources were helpful to learn the steps required to decrypt an Enigma message:
+
+  - ["Enigma Message Procedures"](https://ciphermachinesandcryptology.com/en/enigmaproc.htm), from the Cipher Machines and Cryptology Website
