@@ -23,6 +23,8 @@ I use [Debian Linux](https://www.debian.org) on my laptop computer, in combinati
 
 Although there may be more advanced/precise ways to achieve the audio capture, I used a command-line tool called `pw-record` to record a PCM Wave audio file directly from the running system while I had the KPH WebSDR webpage open in the Firefox web browser.  This meant that I could listen to the output from my laptop while simultaneously writing an audio recording to the computer's filesystem.
 
+The `pw-record` tool can be instructed to record from a specific PipeWire sink - e.g. an audio destination.  One way to show various elements of the running system's PipeWire configuration is to run the `wpctl status` command.
+
 A [BZIP2](https://en.wikipedia.org/wiki/Bzip2)-compressed copy of the transmission that I captured that spans the 20:00 UTC transmission is included in [this GitHub repository](https://github.com/jayaddison/mrhs-kph-enigma-decode).
 
 First decoding stage: from Morse Code to a character stream
