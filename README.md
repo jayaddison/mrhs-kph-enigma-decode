@@ -68,6 +68,7 @@ To decrypt the ciphertext successfully, we need to obtain a few additional input
   - The selection and arrangement of Enigma rotors used
   - The ring settings applied to the rotors
   - The pairing/remapping of keyboard letters used by the transmitting device
+  - The message key: some characters randomly chosen by the transmitting radio officer
 
 These would all have been available to the intended recipients of the transmission as part of a codebook.  Fortunately for us, MRHS also provided a snippet of exactly such a codebook, and so we do not need to brute-force (e.g. try every combination) or otherwise crack (identify flaws in the Enigma protocol and use those to -- sometimes vastly -- reduce the number of combinations to try) the ciphertext.
 
@@ -76,6 +77,8 @@ Referring back to the decoded Morse Code stream, we can see that the unencrypted
 So, we can scan the codebook to find the relevant daily Enigma configuration settings -- and we can also perform a quick check by ensuring that the last three letters of the first five-character ciphertext block - `BSTHH` - appear in that line of the codebook under the `Kenngruppen` column.
 
 Indeed, `THH` does appear for the 27th -- this confirms to us that we are using the correct settings line for the ciphertext that we have received.
+
+Our decryption script also makes use of a pair of three-letter words found in the original transmission -- `JXY LYI`.  These contain the message key, the fourth and final input that we need to decrypt the message.
 
 Finally, we can put together some code to decrypt the message:
 
