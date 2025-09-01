@@ -110,3 +110,12 @@ plaintext = machine.process_text(ciphertext)
 
 print(plaintext)
 ```
+
+...but, to my surprise, running it produced nonsense?
+
+```sh
+$ python3 decode.py 
+LORFDQCUSHLPGDDIGFFOZADYDADMLJYODDNFXMYCMLUVAAUBZBUWEVJFJNEENEJKNZJCGFVVLJXALNZQFVQUSPYIHTGJNIZNAXLAHSXMUGQWKQOWPJP
+```
+
+That's not plaintext; it's neither obviously English nor German (we'd probably expect one of those two, given the nature of the event).
